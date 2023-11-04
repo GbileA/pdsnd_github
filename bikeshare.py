@@ -21,7 +21,7 @@ def get_filters():
         city = input("Let's choose a city first! Which city are you interested "+
                      "in: Chicago, New York City or Washington?\n\n")
         city = city.lower()
-        
+
         if city not in ('new york city', 'chicago', 'washington'):
             print("Oops, I didn't catch that. Give it another shot.")
             continue
@@ -29,17 +29,17 @@ def get_filters():
             break
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
-        month = input("Which month would you like to check for in" + city.title() + 
+        month = input("Which month would you like to check for in" + city.title() +
                       "? You can select any month amongst January, February, March, " +
                       "April, May and June, or type 'all' if you want to display all months.\n\n")
         month = month.lower()
-        if month not in ('january', 'february', 'march', 'april', 'may', 
+        if month not in ('january', 'february', 'march', 'april', 'may',
                          'june', 'all'):
             print("Oops, I didn't catch that. Give it another shot.")
             continue
         else:
             break
-    
+
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
@@ -90,8 +90,8 @@ def load_data(city, month, day):
 
 
 
-def time_stats(df): 
-    
+def time_stats(df):
+
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -123,7 +123,7 @@ def station_stats(df):
     # TO DO: display most commonly used start station
     popular_start_station = df['Start Station'].mode()[0]
     print('Most popularly used start station is:', popular_start_station)
-    
+
 
     # TO DO: display most commonly used end station
     popular_end_station = df['End Station'].mode()[0]
@@ -169,7 +169,7 @@ def user_stats(df):
 
     # TO DO: Display counts of gender
     #Since there is no gender and birth year information for Washington,
-    if  'Gender' in df: 
+    if  'Gender' in df:
         gender_types = df['Gender'].value_counts()
         print('\nGender Types:\n', gender_types)
 
@@ -181,22 +181,22 @@ def user_stats(df):
         print('\nMost Recent Year:', Most_Recent_Birth_Year)
         Most_Common_Birth_Year = int(df['Birth Year'].value_counts().idxmax())
         print('\nMost Common Year:', Most_Common_Birth_Year)
-        
+
     else:
-        print('Sorry. Gender and birth year information are not available for Washington!')   
-        
+        print('Sorry. Gender and birth year information are not available for Washington!')
+
 def raw_data(df):
     i = 1
     while True:
         rawdata = input('\nWould you like to view 5 lines of raw data? Enter yes or no.\n')
         if rawdata.lower() == 'yes':
             print(df[i:i+5])
-            
+
             i = i+5
         else:
-                
+
             break
-            
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -209,6 +209,7 @@ def main():
         raw_data(df)
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
+            PRINT ('OKAY!')
             break
 
 
