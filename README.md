@@ -12,7 +12,7 @@ In this project, a realistic workflow will be simulated to refactor Project 2 us
 ### List of software required
 * Installing GIT tool : https://git-scm.com/downloads.
 
-### Files used
+### Files used to execute this Project
 1. The following file contains necessary commands used to do tasks:
    * Git Commands Documentation.pdf
 2. The following files helps to understand the Git key terms:
