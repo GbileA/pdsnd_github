@@ -19,4 +19,5 @@ In this project, a realistic workflow will be simulated to refactor Project 2 us
    * Git-KeyTerms.pdf
 
 ### Credits
+Git documentation was found to be very helpful.
 (https://git-scm.com/doc).
