@@ -181,7 +181,7 @@ def user_stats(df):
         print('\nMost Recent Year:', Most_Recent_Birth_Year)
         Most_Common_Birth_Year = int(df['Birth Year'].value_counts().idxmax())
         print('\nMost Common Year:', Most_Common_Birth_Year)
-
+    # Display what will show if the user selects Washington
     else:
         print('Sorry. Gender and birth year information are not available for Washington!')
 
